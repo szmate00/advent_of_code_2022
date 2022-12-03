@@ -19,6 +19,7 @@ def partOne(inFile: str) -> int:
     with open(inFile) as f:
         for line in f:
             count += values[(line[0], line[2])]                # then simply add the corresponding value to the count 
+
     return count
 
 print('Solution of part one: ', partOne(inFile))
@@ -39,6 +40,7 @@ def partTwo(inFile: str) -> int:
     with open(inFile) as f:
         for line in f:
             count += values[(line[0], line[2])]
+            
     return count
 
 print('Solution of part two: ', partTwo(inFile))
