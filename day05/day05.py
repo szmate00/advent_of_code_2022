@@ -29,13 +29,13 @@ def partOne(inFile: str) -> str:
             if line[1] == '1':
                 break
             else:
-                strLine = line.strip('\n').replace('    ', '0').replace('[', '').replace(']', '').replace(' ', '')
+                strLine = line.strip('\n').replace('    ', '0').replace('[', '').replace(']', '').replace(' ', '')  # replace the empty values with zeros, so later we can rotate the matrix by transposing it
                 data.append([*strLine])
         
-        data = np.array(data).T[:,::-1]
+        data = np.array(data).T[:,::-1]         # here is the transposing and revrsing the order to have the upper crates at the end of the lists
 
         data2 = []
-        for i in data:
+        for i in data:                          # removing the zeros
             row = []
             for j in i:
                 if j != '0':
